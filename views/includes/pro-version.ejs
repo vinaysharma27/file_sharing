@@ -1,0 +1,28 @@
+<style>
+    #link-pro-version {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: lightseagreen;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        font-size: 20px;
+    }
+    #link-pro-version a:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+<div class="footer fixed-bottom" id="link-pro-version" style="display: none;">
+    File Sharer -  <a style="color: greenyellow;" href="<%= request.mainURL %>/pro-versions">A quick and easy way to share.</a>
+</div>
+
+<script>
+    window.addEventListener("load", function () {
+        if (window.location.pathname.search("pro-versions") == -1) {
+            document.getElementById("link-pro-version").style.display = "";
+        }
+    });
+</script>
