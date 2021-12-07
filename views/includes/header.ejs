@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="<%= request.mainURL %>/public/font-awesome-4.7.0/css/font-awesome.min.css" />
 
     </head>
+
    
 
     <!-- <body background="../2.jpg"> -->
@@ -18,22 +19,22 @@
 
         <!-- top nav bar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand" href="<%= request.mainURL %>">File Sharer</a>
+            <a class="navbar-brand" href="<%= request.mainURL %>" style="color:white">File Sharer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<%= request.mainURL %>" > <b>Home</b> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<%= request.mainURL %>" style="color:white" > Home<span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<%= request.mainURL %>/MyUploads"><b>My Uploads</b></a>
+                        <a class="nav-link" href="<%= request.mainURL %>/MyUploads" style="color:white">My Uploads</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<%= request.mainURL %>/MySharedLinks"><b>My shared links</b></a>
+                        <a class="nav-link" href="<%= request.mainURL %>/MySharedLinks" style="color:white">My shared links</a>
                     </li>
 
                     <% if (request.isLogin) { %>
@@ -42,16 +43,16 @@
                             <%= request.session.user.name %>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<%= request.mainURL %>/Logout"><b>Log out</b></a>
+                                <a class="dropdown-item" href="<%= request.mainURL %>/Logout" style="color:white">Log out</a>
                             </div>
                         </li>
                     <% } else { %>
                         <li class="nav-item">
-                            <a class="nav-link" href="<%= request.mainURL %>/Login"><b>Login</b></a>
+                            <a class="nav-link" href="<%= request.mainURL %>/Login" style="color:white">Login</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<%= request.mainURL %>/Register"><b>Register</b></a>
+                            <a class="nav-link" href="<%= request.mainURL %>/Register" style="color:white">Register</a>
                         </li>
                     <% } %>
                 </ul>
