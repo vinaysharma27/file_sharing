@@ -32,6 +32,8 @@ app.use(session({
 }));
 
 // define the publically accessible folders
+app.use( express.static( "public" ) );
+app.use( express.static( "views" ) );
 app.use("/public/css", express.static(__dirname + "/public/css"));
 app.use("/public/js", express.static(__dirname + "/public/js"));
 app.use("/public/font-awesome-4.7.0", express.static(__dirname + "/public/font-awesome-4.7.0"));
